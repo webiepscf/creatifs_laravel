@@ -14,4 +14,10 @@ class ProjetsController extends Controller
                 ->take(5)->get()
         ]);
     }
+
+
+    public function show(Projet $projet)
+    {
+        return view('projets.show', compact('projet'));
+    }
 }

@@ -19,7 +19,11 @@
         <!-- Project One -->
         <div class="row">
             <div class="col-md-4">
-                <a href="#">
+                <a
+                    href="{{ route('projets.show', [
+                        'projet' => $projet->id,
+                        'slug' => \Illuminate\Support\Str::slug($projet->titre),
+                    ]) }}">
                     <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset('assets/images/' . $projet->image) }}"
                         alt="{{ $projet->titre }}">
                 </a>
@@ -32,7 +36,12 @@
                     le {{ \Carbon\Carbon::parse($projet->dateCreation)->format('d-m-Y') }}
                 </p>
                 <p>{{ $projet->texte }}</p>
-                <a class="btn btn-primary" href="projet_details.html">View Project</a>
+                <a class="btn btn-primary"
+                    href="{{ route('projets.show', [
+                        'projet' => $projet->id,
+                        'slug' => \Illuminate\Support\Str::slug($projet->titre),
+                    ]) }}">View
+                    Project</a>
                 <hr />
                 <ul class="list-inline tags">
                     @foreach ($projet->tags as $tag)
