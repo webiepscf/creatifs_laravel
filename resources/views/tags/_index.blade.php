@@ -9,6 +9,7 @@
                     @foreach ($tags as $tag)
                         <li>
                             <a href="#">{{ $tag->nom }}</a>
+                            [{{ count($tag->projets) }}]
                         </li>
                     @endforeach
                 </ul>
