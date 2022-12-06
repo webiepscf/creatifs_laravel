@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('template.index');
-});
+Route::get('/', [\App\Http\Controllers\ProjetsController::class, 'index']);
