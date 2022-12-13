@@ -13,6 +13,7 @@
 @section('content')
     <!-- Title -->
     <h1 class="mt-4">Les projets <small>Design capill'Hair</small></h1>
+    <a href="" class="btn btn-primary">Create new project</a>
 
     <hr>
     @foreach ($projets as $projet)
@@ -53,6 +54,10 @@
         </div>
         <!-- /.row -->
 
+
         <hr>
     @endforeach
+
+    {{ $projets->links() }}
+
 @stop

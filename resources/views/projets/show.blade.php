@@ -13,18 +13,24 @@
 
     <!-- Title -->
     <h1 class="mt-4">{{ $projet->titre }}</h1>
+
     <p class="lead">
         par
         <a href="artiste_details.html">{{ $projet->createur->pseudo }}</a> le
         {{ \Carbon\Carbon::parse($projet->dateCreation)->format('d-m-Y') }}
     </p>
-
+    <a href="" class="btn btn-primary">Edit</a>
+    <a href="" class="btn btn-secondary">Delete</a>
+    </p>
     <hr>
+    <p>
 
 
 
 
-    <!-- Project One -->
+
+
+        <!-- Project One -->
     <div class="row">
         <div class="col-md-6">
             <a href="#">

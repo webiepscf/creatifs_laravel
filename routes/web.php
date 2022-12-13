@@ -19,3 +19,8 @@ Route::get('/projets', [\App\Http\Controllers\ProjetsController::class, 'index']
 Route::get('/projets/{projet}/{slug}.html', [\App\Http\Controllers\ProjetsController::class, 'show'])
     ->where('id', '[1-9][0-9]*')
     ->name('projets.show');
+
+Route::resource('creatifs', \App\Http\Controllers\CreatifsController::class);
+
+Route::get('/abonnes/store', [\App\Http\Controllers\AbonnesController::class, 'store'])
+    ->name('abonnes.store');

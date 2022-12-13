@@ -11,7 +11,7 @@ class ProjetsController extends Controller
     {
         return view('projets.index', [
             'projets' => Projet::orderBy('dateCreation', 'desc')
-                ->take(5)->get()
+                ->paginate(5)
         ]);
     }
 
